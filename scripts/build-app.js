@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const prompts = require('prompts');
 
-async function runApp() {
+async function buildApp() {
   const appsDir = path.resolve(__dirname, '../apps');
 
   const directories = fs
@@ -17,19 +17,19 @@ async function runApp() {
     return;
   }
 
-  // 사용자에게 실행할 앱을 선택하게 합니다.
+  // 사용자에게 빌드할 앱을 선택하게 합니다.
   const response = await prompts({
     type: 'select',
     name: 'directory',
-    message: 'Select an app to run:',
+    message: 'Select an app to build:',
     choices: directories.map((dir) => ({ title: dir, value: dir })),
   });
 
-  // 선택한 디렉토리에서 pnpm dev 실행
+  // 선택한 디렉토리에서 pnpm build 실행
   if (response.directory) {
     const targetDir = `./apps/${response.directory}`;
 
-    const pnpmProcess = spawn('pnpm', ['--filter', targetDir, 'dev'], {
+    const pnpmProcess = spawn('pnpm', ['--filter', targetDir, 'build'], {
       shell: true,
     });
 
@@ -49,4 +49,4 @@ async function runApp() {
   }
 }
 
-runApp();
+buildApp();

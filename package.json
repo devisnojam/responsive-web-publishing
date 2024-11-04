@@ -8,7 +8,8 @@
     "lint-eslint": "eslint .",
     "prettier-check": "prettier --check .",
     "prettier-fix": "prettier --write .",
-    "dev": "pnpm exec node scripts/start-app.js"
+    "dev": "pnpm exec node scripts/start-app.js",
+    "build": "pnpm exec node scripts/build-app.js"
   },
   "engines": {
     "node": ">=18.18.0",
