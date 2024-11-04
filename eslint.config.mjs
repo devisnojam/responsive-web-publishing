@@ -2,15 +2,25 @@ import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import tseslint from 'typescript-eslint';
+import * as emotionPlugin from '@emotion/eslint-plugin';
 
 export default [
   {
     ignores: ['**/node_modules', 'scripts/start-app.js'],
   },
+
   eslintConfigPrettier,
   ...tseslint.config(
     eslint.configs.recommended,
     ...tseslint.configs.recommended,
+    {
+      plugins: {
+        '@emotion': emotionPlugin,
+      },
+      rules: {
+        '@emotion/jsx-import': 'error',
+      },
+    },
     {
       files: ['**/*.@(js|jsx|ts|tsx)'],
       languageOptions: {

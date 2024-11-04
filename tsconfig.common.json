@@ -1,4 +1,8 @@
 {
   "extends": "@tsconfig/vite-react/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react"
+  },
   "exclude": ["node_modules", "vite.config.ts", "scripts/start-app.js"]
 }
