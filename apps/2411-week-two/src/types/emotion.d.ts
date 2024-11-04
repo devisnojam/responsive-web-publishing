@@ -5,5 +5,6 @@ declare module '@emotion/react' {
   export interface Theme {
     colors: ThemeType['colors'];
     fonts: ThemeType['fonts'];
+    breakpoints: ThemeType['breakpoints'];
   }
 }

@@ -25,20 +25,20 @@ const colorToken = {
   text2: '#3a3a3aff',
   text3: '#717171ff',
   text4: '#ffffffff',
-} as const;
+};
 
 const fontToken = {
-  caption: 12,
+  caption: '12px',
 
-  base14: 14,
-  base16: 16,
+  base14: '14px',
+  base16: '16px',
 
-  h5: 21,
-  h4: 28,
-  h3: 37,
-  h2: 43,
-  h1: 56,
-} as const;
+  h5: '21px',
+  h4: '28px',
+  h3: '37px',
+  h2: '43px',
+  h1: '56px',
+};
 
 /**
  * @description 스타일 변수 모음
@@ -46,6 +46,14 @@ const fontToken = {
 export const theme = {
   colors: colorToken,
   fonts: fontToken,
+  breakpoints: {
+    // min-width
+    device: {
+      mobile: '320px', // 320 ~
+      tablet: '1024px', // 1024 ~
+      desktop: '1920px', // 1920 ~
+    },
+  },
 } as const;
 
 export type ThemeType = typeof theme;
