@@ -1,3 +1,5 @@
+import './styles/sanitize.css';
+
 import { ThemeProvider } from '@emotion/react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
