@@ -27,17 +27,63 @@ const colorToken = {
   text4: '#ffffffff',
 };
 
+const fontWeight = {
+  regular: 500,
+  bold: 700,
+  extraBold: 800,
+};
+
 const fontToken = {
-  caption: '12px',
+  caption: {
+    size: '12px',
+    weight: fontWeight.regular,
+    lineHeight: '1.1',
+    letterSpacing: '-0.12px',
+  },
 
-  base14: '14px',
-  base16: '16px',
+  base14: {
+    size: '14px',
+    weight: fontWeight.regular,
+    lineHeight: '1.4',
+    letterSpacing: '0',
+  },
+  base16: {
+    size: '16px',
+    weight: fontWeight.regular,
+    lineHeight: '24px',
+    letterSpacing: '0',
+  },
 
-  h5: '21px',
-  h4: '28px',
-  h3: '37px',
-  h2: '43px',
-  h1: '56px',
+  h5: {
+    size: '21px',
+    weight: fontWeight.bold,
+    lineHeight: '1.6',
+    letterSpacing: '0',
+  },
+  h4: {
+    size: '28px',
+    weight: fontWeight.bold,
+    lineHeight: '42px',
+    letterSpacing: '0',
+  },
+  h3: {
+    size: '37px',
+    weight: fontWeight.bold,
+    lineHeight: '1.2',
+    letterSpacing: '0',
+  },
+  h2: {
+    size: '43px',
+    weight: fontWeight.extraBold,
+    lineHeight: '1.1',
+    letterSpacing: '0',
+  },
+  h1: {
+    size: '56px',
+    weight: fontWeight.extraBold,
+    lineHeight: '1.1',
+    letterSpacing: '0',
+  },
 };
 
 /**
