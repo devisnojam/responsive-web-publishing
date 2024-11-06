@@ -28,7 +28,7 @@ const colorToken = {
 };
 
 const fontWeight = {
-  regular: 500,
+  regular: 300,
   bold: 700,
   extraBold: 800,
 };

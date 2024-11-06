@@ -1,0 +1,140 @@
+{
+  "color": {
+    "Color": {
+      "Purple color": {
+        "purple": {
+          "value": "rgba(111,79,242,1)",
+          "comment": ""
+        },
+        "purple #1": {
+          "value": "rgba(134,106,250,1)",
+          "comment": ""
+        },
+        "purple #2": {
+          "value": "rgba(150,125,253,1)",
+          "comment": ""
+        },
+        "purple #3": {
+          "value": "rgba(182,165,254,1)",
+          "comment": ""
+        },
+        "purple #4": {
+          "value": "rgba(205,192,255,1)",
+          "comment": ""
+        }
+      },
+      "Nuteral color": {
+        "Nuteral": {
+          "value": "rgba(103,105,111,1)",
+          "comment": ""
+        },
+        "Nuteral #1": {
+          "value": "rgba(146,148,152,1)",
+          "comment": ""
+        },
+        "Nuteral #2": {
+          "value": "rgba(211,212,214,1)",
+          "comment": ""
+        },
+        "Nuteral #3": {
+          "value": "rgba(241,241,242,1)",
+          "comment": ""
+        },
+        "Nuteral #4": {
+          "value": "rgba(255,255,255,1)",
+          "comment": ""
+        }
+      },
+      "Success color": {
+        "Success": {
+          "value": "rgba(12,200,87,1)",
+          "comment": ""
+        },
+        "Success #1": {
+          "value": "rgba(41,224,114,1)",
+          "comment": ""
+        },
+        "Success #2": {
+          "value": "rgba(88,231,145,1)",
+          "comment": ""
+        },
+        "Success #3": {
+          "value": "rgba(136,238,177,1)",
+          "comment": ""
+        },
+        "Success #4": {
+          "value": "rgba(184,245,208,1)",
+          "comment": ""
+        }
+      },
+      "Danger color": {
+        "Danger": {
+          "value": "rgba(224,30,30,1)",
+          "comment": ""
+        },
+        "Danger #2": {
+          "value": "rgba(220,53,70,1)",
+          "comment": ""
+        }
+      },
+      "Text color": {
+        "Text": {
+          "value": "rgba(12,12,12,1)",
+          "comment": ""
+        },
+        "Text #1": {
+          "value": "rgba(32,32,32,1)",
+          "comment": ""
+        },
+        "Text #2": {
+          "value": "rgba(58,58,58,1)",
+          "comment": ""
+        },
+        "Text #3": {
+          "value": "rgba(113,113,113,1)",
+          "comment": ""
+        },
+        "Text #4": {
+          "value": "rgba(255,255,255,1)",
+          "comment": ""
+        }
+      }
+    }
+  },
+  "size": {
+    "Font": {
+      "Caption": {
+        "value": "12",
+        "comment": ""
+      },
+      "Base(Body 2)-14px": {
+        "value": "14",
+        "comment": ""
+      },
+      "Base(Body)-16px": {
+        "value": "16",
+        "comment": ""
+      },
+      "H5": {
+        "value": "21",
+        "comment": ""
+      },
+      "H4": {
+        "value": "28",
+        "comment": ""
+      },
+      "H3": {
+        "value": "37",
+        "comment": ""
+      },
+      "H2": {
+        "value": "43",
+        "comment": ""
+      },
+      "H1": {
+        "value": "56",
+        "comment": ""
+      }
+    }
+  }
+}

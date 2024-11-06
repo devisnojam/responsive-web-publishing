@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "build": "vite build"
+    "build": "vite build",
+    "gn:iconindex": "node ./scripts/generate-iconfile-index.js"
   },
   "peerDependencies": {
     "react": "^18.3.1",

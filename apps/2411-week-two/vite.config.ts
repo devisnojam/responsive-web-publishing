@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 
-import rootConfig from '../../vite.config';
+import rootConfig from '../../vite.common.config';
 
 export default defineConfig({
   ...rootConfig,
