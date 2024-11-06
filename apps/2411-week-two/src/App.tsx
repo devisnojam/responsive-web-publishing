@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import { IconButton } from './@shared/components/buttons';
+import Header from './@shared/components/header';
 
 export default function App() {
   return (
@@ -25,6 +26,10 @@ export default function App() {
           Button
         </IconButton>
         <IconButton varients="outline">Button</IconButton>
+      </FlexBox>
+
+      <FlexBox direction="row" gap={24}>
+        <Header />
       </FlexBox>
     </FlexBox>
   );

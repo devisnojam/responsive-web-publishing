@@ -13,7 +13,12 @@ export default function GlobalStyle() {
           line-height: ${theme.fonts.base14.lineHeight};
           letter-spacing: ${theme.fonts.base14.letterSpacing};
         }
-
+        a {
+          text-decoration: none;
+          &:visited {
+            color: unset;
+          }
+        }
         button {
           cursor: pointer;
         }
