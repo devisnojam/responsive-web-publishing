@@ -1,16 +1,32 @@
 import styled from '@emotion/styled';
 
 import { Logo } from './logo';
-import { Navigation } from './navigation';
+import { MenuItems } from './menu-items';
+import { NotificationButton } from '../buttons';
 
 export default function Container() {
   return (
     <Header>
       <Logo />
-      <Navigation className="nav" />
+
+      <StyledNav>
+        <MenuItems className="menu-items" />
+        <NotificationButton />
+      </StyledNav>
     </Header>
   );
 }
+
+const StyledNav = styled.nav`
+  ${() => ({
+    display: 'none',
+    alignItems: 'center',
+    columnGap: '12px',
+  })}
+  @media (min-width: ${({ theme }) => theme.breakpoints.device.desktop}) {
+    display: flex;
+  }
+`;
 
 const Header = styled.header`
   ${() => ({
@@ -18,14 +34,8 @@ const Header = styled.header`
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    '> .nav': {
-      display: 'none',
-    },
+    // '> .nav': {
+    //   display: 'none',
+    // },
   })}
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.device.desktop}) {
-    > .nav {
-      display: block;
-    }
-  }
 `;
