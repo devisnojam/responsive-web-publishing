@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import { IconButton } from './@shared/components/buttons';
+import { NFTCard } from './@shared/components/card';
 import Header from './@shared/components/header';
 
 export default function App() {
@@ -30,6 +31,18 @@ export default function App() {
 
       <FlexBox direction="row" gap={24}>
         <Header />
+      </FlexBox>
+
+      <FlexBox direction="row" gap={24}>
+        <NFTCard
+          nftName="Name of Artwork"
+          creators={[
+            { id: 'abcdef12345', avatarImgSrc: undefined },
+            { id: 'qwerty12345', avatarImgSrc: undefined },
+            // { id: 'ccggkk12345', avatarImgSrc: undefined },
+          ]}
+          priceOfEth={1000}
+        />
       </FlexBox>
     </FlexBox>
   );

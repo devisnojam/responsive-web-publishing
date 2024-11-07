@@ -26,6 +26,9 @@ export default function GlobalStyle() {
         button {
           cursor: pointer;
         }
+        img {
+          max-width: 100%;
+        }
 
         #root {
           width: 85.33333%;
