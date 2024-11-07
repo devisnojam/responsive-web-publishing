@@ -12,6 +12,7 @@ export default function GlobalStyle() {
           font-weight: ${theme.fonts.base14.weight};
           line-height: ${theme.fonts.base14.lineHeight};
           letter-spacing: ${theme.fonts.base14.letterSpacing};
+          user-select: none;
         }
         body {
           margin: 0;

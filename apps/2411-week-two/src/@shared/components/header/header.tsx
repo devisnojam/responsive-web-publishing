@@ -10,7 +10,7 @@ export default function Container() {
       <Logo />
 
       <StyledNav>
-        <MenuItems className="menu-items" />
+        <MenuItems />
         <NotificationButton redDot />
         <ProfileButton />
       </StyledNav>
@@ -35,8 +35,5 @@ const Header = styled.header`
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    // '> .nav': {
-    //   display: 'none',
-    // },
   })}
 `;

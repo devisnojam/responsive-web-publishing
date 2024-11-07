@@ -43,7 +43,7 @@ export default function IconButton({
     </StyledButton>
   );
 }
-// 접근성 살려서 아이콘 위치 넣는법 작업
+
 const StyledButton = styled.button<Props>`
   ${({ theme }) => ({
     // base
