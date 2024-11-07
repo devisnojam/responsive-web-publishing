@@ -13,6 +13,9 @@ export default function GlobalStyle() {
           line-height: ${theme.fonts.base14.lineHeight};
           letter-spacing: ${theme.fonts.base14.letterSpacing};
         }
+        body {
+          margin: 0;
+        }
         a {
           text-decoration: none;
           &:visited {
@@ -21,6 +24,16 @@ export default function GlobalStyle() {
         }
         button {
           cursor: pointer;
+        }
+
+        #root {
+          width: 85.33333%;
+          margin: 0 auto;
+        }
+        @media (min-width: ${theme.breakpoints.device.tablet}) {
+          #root {
+            width: 72.65625%;
+          }
         }
       `}
     />

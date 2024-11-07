@@ -15,7 +15,7 @@ export default function Container() {
 const Header = styled.header`
   ${() => ({
     width: '100%',
-    display: 'fl ex',
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     '> .nav': {
