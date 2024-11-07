@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { Logo } from './logo';
 import { MenuItems } from './menu-items';
-import { NotificationButton } from '../buttons';
+import { NotificationButton, ProfileButton } from '../buttons';
 
 export default function Container() {
   return (
@@ -12,6 +12,7 @@ export default function Container() {
       <StyledNav>
         <MenuItems className="menu-items" />
         <NotificationButton redDot />
+        <ProfileButton />
       </StyledNav>
     </Header>
   );
