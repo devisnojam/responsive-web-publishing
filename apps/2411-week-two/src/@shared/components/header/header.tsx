@@ -11,7 +11,7 @@ export default function Container() {
 
       <StyledNav>
         <MenuItems className="menu-items" />
-        <NotificationButton />
+        <NotificationButton redDot />
       </StyledNav>
     </Header>
   );

@@ -21,7 +21,7 @@ export default function NotificationButton({
 }
 
 const StyledButton = styled.button<Props>`
-  ${({ theme }) => ({
+  ${({ redDot, theme }) => ({
     width: '44px',
     height: '44px',
     backgroundColor: theme.colors.nuteral3,
@@ -31,6 +31,15 @@ const StyledButton = styled.button<Props>`
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
+    '::before': {
+      content: '" "',
+      display: redDot ? 'block' : 'none',
+      border: '4px solid #ff0000',
+      borderRadius: '50%',
+      position: 'absolute',
+      top: '8px',
+      right: '12px',
+    },
     '>svg': {
       fill: 'transparent',
       path: {
