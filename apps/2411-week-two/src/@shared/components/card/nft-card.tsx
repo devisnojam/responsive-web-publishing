@@ -2,13 +2,9 @@ import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 
 import { SVGIconCurrencyEthereum } from '../../../assets/icons';
+import { UserType } from '../../../types/schema.type';
 import Avatar from '../avatar';
 import { IconButton } from '../buttons';
-
-type UserType = {
-  id: string;
-  avatarImgSrc?: string;
-};
 
 interface Props extends ComponentProps<'div'> {
   className?: string;
@@ -35,8 +31,8 @@ export default function NFTCard({
       <div className="nft-info">
         <span className="name">{nftName}</span>
         <div className="creator">
-          {creators.map((_, index) => (
-            <StyledAvatar index={index} />
+          {creators.map((c, index) => (
+            <StyledAvatar key={c.id} index={index} />
           ))}
           <span className="user-id">
             {creators.map((c) => c.id).join(', ')}
@@ -62,6 +58,7 @@ const StyledCard = styled.div`
     padding: '12px',
     width: '277px',
     borderRadius: '15px',
+    backgroundColor: theme.colors.nuteral4,
     display: 'flex',
     flexDirection: 'column',
     rowGap: '14.67px',

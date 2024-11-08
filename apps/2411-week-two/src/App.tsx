@@ -1,12 +1,19 @@
+import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import { ComponentProps } from 'react';
 
 import { IconButton } from './@shared/components/buttons';
-import { NFTCard } from './@shared/components/card';
+import { ArtistCard, NFTCard } from './@shared/components/card';
 import Header from './@shared/components/header';
 
 export default function App() {
+  const theme = useTheme();
   return (
-    <FlexBox direction="column" gap={24}>
+    <FlexBox
+      direction="column"
+      gap={24}
+      style={{ backgroundColor: theme.colors.nuteral3 }}
+    >
       <FlexBox direction="row" gap={24}>
         <IconButton leftIcon="diamond" rightIcon="arrow-r">
           Button
@@ -37,19 +44,107 @@ export default function App() {
         <NFTCard
           nftName="Name of Artwork"
           creators={[
-            { id: 'abcdef12345', avatarImgSrc: undefined },
-            { id: 'qwerty12345', avatarImgSrc: undefined },
-            // { id: 'ccggkk12345', avatarImgSrc: undefined },
+            {
+              id: 'abcdef12345',
+              name: 'ABCDEF',
+              avatarImgSrc: undefined,
+              rank: 1,
+            },
+            {
+              id: 'qwerty12345',
+              name: 'QWERTY',
+              avatarImgSrc: undefined,
+              rank: 2,
+            },
           ]}
           priceOfEth={1000}
         />
       </FlexBox>
+
+      <GridBox>
+        <ArtistCard
+          creator={{
+            id: 'abcdef12345',
+            name: 'ABCDEF',
+            avatarImgSrc: undefined,
+            rank: 1,
+          }}
+          nftNumber={99999991020}
+        />
+        <ArtistCard
+          creator={{
+            id: 'abcdef12345',
+            name: 'ABCDEF',
+            avatarImgSrc: undefined,
+            rank: 1,
+          }}
+          nftNumber={99999991020}
+        />
+        <ArtistCard
+          creator={{
+            id: 'abcdef12345',
+            name: 'ABCDEF',
+            avatarImgSrc: undefined,
+            rank: 1,
+          }}
+          nftNumber={99999991020}
+        />
+        <ArtistCard
+          creator={{
+            id: 'abcdef12345',
+            name: 'ABCDEF',
+            avatarImgSrc: undefined,
+            rank: 1,
+          }}
+          nftNumber={99999991020}
+        />
+        <ArtistCard
+          creator={{
+            id: 'abcdef12345',
+            name: 'ABCDEF',
+            avatarImgSrc: undefined,
+            rank: 1,
+          }}
+          nftNumber={99999991020}
+        />
+        <ArtistCard
+          creator={{
+            id: 'abcdef12345',
+            name: 'ABCDEF',
+            avatarImgSrc: undefined,
+            rank: 1,
+          }}
+          nftNumber={99999991020}
+        />
+      </GridBox>
     </FlexBox>
   );
 }
 
-const FlexBox = styled.div<{ direction: 'row' | 'column'; gap: number }>`
+const FlexBox = styled.div<{
+  width?: string;
+  direction: 'row' | 'column';
+  gap: number;
+}>`
+  width: ${({ width }) => (width ? width : 'auto')};
   display: flex;
   flex-direction: ${({ direction }) => direction};
   gap: ${({ gap }) => gap}px;
+`;
+
+const GridBox = styled.div<ComponentProps<'div'>>`
+  padding: 20px;
+  display: grid;
+
+  // case 1
+  /* width: 100%; */
+  /* grid-template-columns: repeat(6, 1fr); */
+
+  // case 2
+  width: 370px;
+  height: 370px;
+  overflow-y: scroll;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 `;
