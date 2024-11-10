@@ -57,6 +57,11 @@ const StyledButton = styled.button<Props>`
     letterSpacing: theme.fonts.caption.letterSpacing,
     display: 'flex',
     alignItems: 'center',
+    '>span': {
+      display: 'inline-block',
+      width: '100%',
+      textAlign: 'center',
+    },
     '>svg': {
       width: '12px',
       height: '12px',

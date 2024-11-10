@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import { Logo } from './logo';
 import { MenuItems } from './menu-items';
 import { NotificationButton, ProfileButton } from '../buttons';
-import SearchInput from '../inputs/search-input';
+import TextInput from '../inputs/text-input';
 
 export default function Container() {
   return (
     <Header>
       <Logo />
-      <SearchInput />
+      <TextInput leftIcon="search" />
 
       <ItemGroup className="nav">
         <MenuItems />

@@ -4,7 +4,7 @@ import { ComponentProps } from 'react';
 
 import MainBanner from './@shared/components/banner/main-banner';
 import { IconButton } from './@shared/components/buttons';
-import { ArtistCard, NFTCard } from './@shared/components/card';
+import { ArtistCard, CommunityCard, NFTCard } from './@shared/components/card';
 import Header from './@shared/components/header';
 
 export default function App() {
@@ -43,6 +43,10 @@ export default function App() {
 
       <FlexBox direction="row" gap={24}>
         <MainBanner />
+      </FlexBox>
+
+      <FlexBox direction="row" gap={24}>
+        <CommunityCard />
       </FlexBox>
 
       <FlexBox direction="row" gap={24}>

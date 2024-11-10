@@ -32,12 +32,5 @@ const StyledButton = styled.button`
     display: 'flex',
     alignItems: 'center',
     columnGap: '10px',
-    // '>img': {
-    //   width: '42px',
-    //   height: '42px',
-    //   borderRadius: '50%',
-    //   outline: '1px solid',
-    //   outlineColor: theme.colors.success1,
-    // },
   })}
 `;

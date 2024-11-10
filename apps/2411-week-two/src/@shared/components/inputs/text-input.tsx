@@ -1,25 +1,32 @@
 import styled from '@emotion/styled';
-import { ComponentProps } from 'react';
+import { ComponentProps, useId } from 'react';
 
 import { SVGIconSearchMd } from '../../../assets/icons';
 
 interface Props extends ComponentProps<'label'> {
   className?: string;
+  leftIcon?: 'search';
+  placeholder?: string;
 }
 
-export default function SearchInput({ className }: Props) {
+export default function TextInput({
+  className,
+  leftIcon,
+  placeholder = 'input keyword',
+  ...props
+}: Props) {
+  const id = useId();
   return (
-    <StyledLabel htmlFor="search" className={className}>
-      <input id="search" type="text" placeholder="input keyword" />
-      <SVGIconSearchMd />
+    <StyledLabel htmlFor={id} className={className} {...props}>
+      <input id={id} type="text" placeholder={placeholder} />
+      {leftIcon && <SVGIconSearchMd />}
     </StyledLabel>
   );
 }
 
 const StyledLabel = styled.label<Props>`
-  ${({ theme }) => ({
-    width: '268px',
-    padding: '10px',
+  ${({ theme, leftIcon }) => ({
+    padding: leftIcon ? '10px' : '10px 12px',
     color: theme.colors.text3,
     fontSize: theme.fonts.base16.size,
     fontWeight: theme.fonts.base16.weight,

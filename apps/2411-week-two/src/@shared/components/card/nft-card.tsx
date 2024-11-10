@@ -148,6 +148,4 @@ const StyledCard = styled.div`
 const StyledAvatar = styled(Avatar)<{ index: number }>`
   width: 27px;
   height: 27px;
-  /* position: absolute; */
-  /* left: ${({ index }) => `calc(27px / 1.5 * ${index})`}; */
 `;
