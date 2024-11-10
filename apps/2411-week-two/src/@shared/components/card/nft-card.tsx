@@ -56,7 +56,7 @@ export default function NFTCard({
 const StyledCard = styled.div`
   ${({ theme }) => ({
     padding: '12px',
-    width: '277px',
+    // width: '277px',
     borderRadius: '15px',
     backgroundColor: theme.colors.nuteral4,
     display: 'flex',
@@ -71,6 +71,7 @@ const StyledCard = styled.div`
       width: '100%',
       height: '210px',
       borderRadius: '15px',
+      textAlign: 'center',
       overflow: 'hidden',
       position: 'relative',
     },

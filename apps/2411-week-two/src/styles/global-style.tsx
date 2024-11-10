@@ -31,8 +31,10 @@ export default function GlobalStyle() {
         }
 
         #root {
-          width: 85.33333%;
+          /* width: 85.33333%; */
+          width: calc(100% - 54px);
           margin: 0 auto;
+          margin-top: 28px;
         }
         @media (min-width: ${theme.breakpoints.device.tablet}) {
           #root {

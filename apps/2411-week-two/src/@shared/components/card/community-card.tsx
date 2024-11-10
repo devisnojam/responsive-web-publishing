@@ -37,6 +37,7 @@ const StyledContainer = styled.div`
     display: 'flex',
     flexDirection: 'column',
     rowGap: '12px',
+    boxShadow: '0px 4px 8px 0px rgba(111, 79, 242, 0.4)',
     img: {
       height: '282px',
       borderRadius: '15px',

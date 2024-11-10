@@ -1,15 +1,20 @@
 import styled from '@emotion/styled';
+import { ComponentProps } from 'react';
 
 import { Logo } from './logo';
 import { MenuItems } from './menu-items';
 import { NotificationButton, ProfileButton } from '../buttons';
 import TextInput from '../inputs/text-input';
 
-export default function Container() {
+interface Props extends ComponentProps<'header'> {
+  className?: string;
+}
+
+export default function Container({ className }: Props) {
   return (
-    <Header>
+    <Header className={className}>
       <Logo />
-      <TextInput leftIcon="search" />
+      <TextInput className="search-input" leftIcon="search" />
 
       <ItemGroup className="nav">
         <MenuItems />
@@ -27,10 +32,18 @@ const Header = styled.header`
     alignItems: 'center',
     justifyContent: 'flex-start',
     columnGap: '18px',
+    '.search-input': {
+      display: 'none',
+    },
     '.nav': {
       marginLeft: 'auto',
     },
   })}
+  @media (min-width: ${({ theme }) => theme.breakpoints.device.desktop}) {
+    .search-input {
+      display: block;
+    }
+  }
 `;
 
 const ItemGroup = styled.nav`

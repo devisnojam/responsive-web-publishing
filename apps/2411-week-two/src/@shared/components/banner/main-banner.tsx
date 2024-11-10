@@ -9,8 +9,8 @@ interface Props extends ComponentProps<'div'> {
 
 export default function MainBanner({ className }: Props) {
   return (
-    <Grid>
-      <StyledContainer className={className}>
+    <Container className={className}>
+      <Banner>
         <span className="title">
           Explore Unique Digital Art and Collectibles
         </span>
@@ -26,7 +26,7 @@ export default function MainBanner({ className }: Props) {
             Create your own
           </IconButton>
         </ButtonGroup>
-      </StyledContainer>
+      </Banner>
 
       <ButtonGroup className="outer">
         <IconButton rightIcon="arrow-r">Discover now</IconButton>
@@ -34,13 +34,12 @@ export default function MainBanner({ className }: Props) {
           Create your own
         </IconButton>
       </ButtonGroup>
-    </Grid>
+    </Container>
   );
 }
 
-const StyledContainer = styled.div`
+const Banner = styled.div`
   ${({ theme }) => ({
-    marginBottom: '12px',
     padding: '12px 0',
     paddingLeft: '32px',
     paddingRight: '119px',
@@ -90,7 +89,7 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Grid = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 12px;

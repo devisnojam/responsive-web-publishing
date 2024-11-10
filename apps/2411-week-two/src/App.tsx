@@ -1,159 +1,265 @@
-import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
-import { ComponentProps } from 'react';
 
 import MainBanner from './@shared/components/banner/main-banner';
-import { IconButton } from './@shared/components/buttons';
 import { ArtistCard, CommunityCard, NFTCard } from './@shared/components/card';
 import Header from './@shared/components/header';
 
 export default function App() {
-  const theme = useTheme();
   return (
-    <FlexBox
-      direction="column"
-      gap={24}
-      style={{ backgroundColor: theme.colors.nuteral3 }}
-    >
-      <FlexBox direction="row" gap={24}>
-        <IconButton leftIcon="diamond" rightIcon="arrow-r">
-          Button
-        </IconButton>
-        <IconButton leftIcon="diamond">Button</IconButton>
-        <IconButton rightIcon="arrow-r">Button</IconButton>
-        <IconButton>Button</IconButton>
-      </FlexBox>
+    <StyledContainer>
+      <Header className="header" />
 
-      <FlexBox direction="row" gap={24}>
-        <IconButton varients="outline" leftIcon="diamond" rightIcon="arrow-r">
-          Button
-        </IconButton>
-        <IconButton varients="outline" leftIcon="diamond">
-          Button
-        </IconButton>
-        <IconButton varients="outline" rightIcon="arrow-r">
-          Button
-        </IconButton>
-        <IconButton varients="outline">Button</IconButton>
-      </FlexBox>
+      <MainBanner className="banner" />
 
-      <FlexBox direction="row" gap={24}>
-        <Header />
-      </FlexBox>
+      <section className="featured-nft">
+        <span className="title">Featured NFTs</span>
+        <div className="card-list">
+          <NFTCard
+            creators={[
+              {
+                id: 'abcdef12345',
+                name: 'ABCDEF',
+                avatarImgSrc: undefined,
+                rank: 1,
+              },
+            ]}
+            nftName="test"
+            priceOfEth={99999}
+          />
+          <NFTCard
+            creators={[
+              {
+                id: 'abcdef12345',
+                name: 'ABCDEF',
+                avatarImgSrc: undefined,
+                rank: 1,
+              },
+            ]}
+            nftName="test"
+            priceOfEth={99999}
+          />
+          <NFTCard
+            creators={[
+              {
+                id: 'abcdef12345',
+                name: 'ABCDEF',
+                avatarImgSrc: undefined,
+                rank: 1,
+              },
+            ]}
+            nftName="test"
+            priceOfEth={99999}
+          />
+        </div>
+      </section>
 
-      <FlexBox direction="row" gap={24}>
-        <MainBanner />
-      </FlexBox>
-
-      <FlexBox direction="row" gap={24}>
-        <CommunityCard />
-      </FlexBox>
-
-      <FlexBox direction="row" gap={24}>
-        <NFTCard
-          nftName="Name of Artwork"
-          creators={[
-            {
+      <section className="meet-creator">
+        <span className="title">Meet Our Talented Creators</span>
+        <div className="card-list">
+          <ArtistCard
+            creator={{
               id: 'abcdef12345',
               name: 'ABCDEF',
               avatarImgSrc: undefined,
               rank: 1,
-            },
-            {
-              id: 'qwerty12345',
-              name: 'QWERTY',
+            }}
+            nftNumber={101010122}
+          />
+          <ArtistCard
+            creator={{
+              id: 'abcdef12345',
+              name: 'ABCDEF',
               avatarImgSrc: undefined,
-              rank: 2,
-            },
-          ]}
-          priceOfEth={1000}
-        />
-      </FlexBox>
+              rank: 1,
+            }}
+            nftNumber={101010122}
+          />
+          <ArtistCard
+            creator={{
+              id: 'abcdef12345',
+              name: 'ABCDEF',
+              avatarImgSrc: undefined,
+              rank: 1,
+            }}
+            nftNumber={101010122}
+          />
+          <ArtistCard
+            creator={{
+              id: 'abcdef12345',
+              name: 'ABCDEF',
+              avatarImgSrc: undefined,
+              rank: 1,
+            }}
+            nftNumber={101010122}
+          />
+        </div>
+      </section>
 
-      <GridBox>
-        <ArtistCard
-          creator={{
-            id: 'abcdef12345',
-            name: 'ABCDEF',
-            avatarImgSrc: undefined,
-            rank: 1,
-          }}
-          nftNumber={99999991020}
-        />
-        <ArtistCard
-          creator={{
-            id: 'abcdef12345',
-            name: 'ABCDEF',
-            avatarImgSrc: undefined,
-            rank: 1,
-          }}
-          nftNumber={99999991020}
-        />
-        <ArtistCard
-          creator={{
-            id: 'abcdef12345',
-            name: 'ABCDEF',
-            avatarImgSrc: undefined,
-            rank: 1,
-          }}
-          nftNumber={99999991020}
-        />
-        <ArtistCard
-          creator={{
-            id: 'abcdef12345',
-            name: 'ABCDEF',
-            avatarImgSrc: undefined,
-            rank: 1,
-          }}
-          nftNumber={99999991020}
-        />
-        <ArtistCard
-          creator={{
-            id: 'abcdef12345',
-            name: 'ABCDEF',
-            avatarImgSrc: undefined,
-            rank: 1,
-          }}
-          nftNumber={99999991020}
-        />
-        <ArtistCard
-          creator={{
-            id: 'abcdef12345',
-            name: 'ABCDEF',
-            avatarImgSrc: undefined,
-            rank: 1,
-          }}
-          nftNumber={99999991020}
-        />
-      </GridBox>
-    </FlexBox>
+      <section className="explore">
+        <span className="title">Explore</span>
+        <span className="description">
+          Lorem ipsum dolor sit amet consectetur. Iaculis vestibulum purus
+          facilisi ultrices sed faucibus proin cum ut.
+        </span>
+
+        <div className="card-list">
+          <NFTCard
+            creators={[
+              {
+                id: 'abcdef12345',
+                name: 'ABCDEF',
+                avatarImgSrc: undefined,
+                rank: 1,
+              },
+            ]}
+            nftName="test"
+            priceOfEth={99999}
+          />
+          <NFTCard
+            creators={[
+              {
+                id: 'abcdef12345',
+                name: 'ABCDEF',
+                avatarImgSrc: undefined,
+                rank: 1,
+              },
+            ]}
+            nftName="test"
+            priceOfEth={99999}
+          />
+          <NFTCard
+            creators={[
+              {
+                id: 'abcdef12345',
+                name: 'ABCDEF',
+                avatarImgSrc: undefined,
+                rank: 1,
+              },
+            ]}
+            nftName="test"
+            priceOfEth={99999}
+          />
+        </div>
+      </section>
+
+      <section className="community">
+        <CommunityCard />
+      </section>
+
+      <img className="bg" src="/imgs/page-bg.png" alt="bg" />
+    </StyledContainer>
   );
 }
 
-const FlexBox = styled.div<{
-  width?: string;
-  direction: 'row' | 'column';
-  gap: number;
-}>`
-  width: ${({ width }) => (width ? width : 'auto')};
-  display: flex;
-  flex-direction: ${({ direction }) => direction};
-  gap: ${({ gap }) => gap}px;
-`;
+const StyledContainer = styled.div`
+  ${({ theme }) => ({
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
 
-const GridBox = styled.div<ComponentProps<'div'>>`
-  padding: 20px;
-  display: grid;
+    '>img.bg': {
+      width: '100%',
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      zIndex: -1,
+    },
 
-  // case 1
-  /* width: 100%; */
-  /* grid-template-columns: repeat(6, 1fr); */
+    '.header': {
+      marginBottom: '22px',
+    },
+    '.banner': {
+      marginBottom: '24px',
+      button: {
+        flex: 1,
+      },
+    },
+    '.featured-nft': {
+      marginBottom: '24px',
+      color: theme.colors.purple0,
+      display: 'flex',
+      flexDirection: 'column',
+      rowGap: '12px',
+      '& .title': {
+        fontSize: theme.fonts.h5.size,
+        fontWeight: theme.fonts.h5.weight,
+      },
+      '& .card-list': {
+        display: 'grid',
+        gridTemplateRows: 'repeat(3, 1fr)',
+        rowGap: '12px',
+      },
+    },
+    '.meet-creator': {
+      marginBottom: '24px',
+      display: 'flex',
+      flexDirection: 'column',
+      '& .title': {
+        fontSize: theme.fonts.base16.size,
+        fontWeight: theme.fonts.base16.weight,
+      },
+      '& .card-list': {
+        paddingTop: '24px',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridTemplateRows: 'repeat(2, 1fr)',
+        columnGap: '12px',
+        rowGap: '24px',
+        overflowY: 'scroll',
+      },
+    },
+    '.explore': {
+      marginBottom: '24px',
+      display: 'flex',
+      flexDirection: 'column',
+      rowGap: '12px',
+      '>span': {
+        display: 'inline-block',
+        '&.description': {
+          fontSize: theme.fonts.base14.size,
+          fontWeight: theme.fonts.base14.weight,
+        },
+      },
+      '>.card-list': {
+        display: 'grid',
+        gridTemplateRows: 'repeat(3, 1fr)',
+        rowGap: '12px',
+      },
+    },
+    '.community': {},
+  })}
 
-  // case 2
-  width: 370px;
-  height: 370px;
-  overflow-y: scroll;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  @media (min-width: ${({ theme }) => theme.breakpoints.device.tablet}) {
+    .banner {
+      margin-bottom: '24px';
+      & .inner {
+        width: 415px;
+      }
+    }
+
+    .featured-nft {
+      & .card-list {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 24px;
+      }
+    }
+
+    .meet-creator {
+      & .card-list {
+        padding: 25px;
+        grid-template-rows: unset;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 12px;
+      }
+    }
+
+    .explore {
+      & .card-list {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 24px;
+      }
+    }
+  }
 `;
