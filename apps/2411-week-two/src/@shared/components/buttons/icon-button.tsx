@@ -46,7 +46,6 @@ export default function IconButton({
 
 const StyledButton = styled.button<Props>`
   ${({ theme }) => ({
-    // base
     padding: '8px 12px',
     color: theme.colors.text4,
     backgroundColor: theme.colors.purple1,
@@ -73,6 +72,7 @@ const StyledButton = styled.button<Props>`
       boxShadow: '0px 4px 8px 0px rgba(194, 118, 253, 0.2)',
     },
   })}
+
   ${({ theme, varients }) =>
     varients === 'outline' && {
       color: theme.colors.purple0,
@@ -91,9 +91,4 @@ const StyledButton = styled.button<Props>`
         boxShadow: '0px 4px 8px 0px rgba(111, 79, 242, 0.8)',
       },
     }}
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.device.tablet}) {
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoints.device.desktop}) {
-  }
 `;

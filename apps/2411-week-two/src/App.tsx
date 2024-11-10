@@ -2,6 +2,7 @@ import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 
+import MainBanner from './@shared/components/banner/main-banner';
 import { IconButton } from './@shared/components/buttons';
 import { ArtistCard, NFTCard } from './@shared/components/card';
 import Header from './@shared/components/header';
@@ -38,6 +39,10 @@ export default function App() {
 
       <FlexBox direction="row" gap={24}>
         <Header />
+      </FlexBox>
+
+      <FlexBox direction="row" gap={24}>
+        <MainBanner />
       </FlexBox>
 
       <FlexBox direction="row" gap={24}>
