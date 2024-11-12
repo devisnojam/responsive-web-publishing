@@ -1,6 +1,7 @@
 {
   "name": "2411-week-three",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.html",
   "scripts": {
     "storybook": "storybook dev -p 6006",

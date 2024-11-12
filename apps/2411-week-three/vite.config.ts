@@ -5,6 +5,6 @@ import rootConfig from '../../vite.common.config';
 export default defineConfig({
   ...rootConfig,
   server: {
-    port: 3001,
+    port: 3000,
   },
 });
