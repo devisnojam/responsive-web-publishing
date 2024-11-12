@@ -6,7 +6,7 @@ import * as emotionPlugin from '@emotion/eslint-plugin';
 
 export default [
   {
-    ignores: ['**/node_modules', 'scripts/start-app.js'],
+    ignores: ['**/node_modules', '**/scripts/*', '**/dist'],
   },
 
   eslintConfigPrettier,

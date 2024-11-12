@@ -8,7 +8,8 @@
     "lint-eslint": "eslint .",
     "prettier-check": "prettier --check .",
     "prettier-fix": "prettier --write .",
-    "dev": "pnpm exec node scripts/start-app.js"
+    "dev": "pnpm exec node scripts/start-app.js",
+    "build": "pnpm exec node scripts/build-app.js"
   },
   "engines": {
     "node": ">=18.18.0",
@@ -19,7 +20,8 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
     "@emotion/eslint-plugin": "^11.12.0",
@@ -35,6 +37,7 @@
     "prompts": "^2.4.2",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.12.2",
-    "vite": "^5.4.10"
+    "vite": "^5.4.10",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }
