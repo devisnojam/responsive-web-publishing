@@ -8,3 +8,5 @@ declare module '@emotion/react' {
     breakpoints: ThemeType['breakpoints'];
   }
 }
+
+declare module '@emotion/react/macro' {}
