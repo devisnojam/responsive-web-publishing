@@ -7,7 +7,6 @@ const AvatarMeta = {
   component: Avatar,
   parameters: {
     layout: 'centered',
-    
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Avatar>;

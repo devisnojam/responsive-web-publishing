@@ -46,7 +46,12 @@ const baseStyle = ({ theme }: StyleProps) => css`
   border-radius: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 12px;
+  span {
+    position: relative;
+    top: 2px;
+  }
 `;
 const secondaryStyle = ({ theme }: StyleProps) => css`
   ${theme.fonts.fontButton('work-sans')}

@@ -7,6 +7,7 @@ import {
   fontH3,
   fontH4,
   fontH5,
+  fontStyle,
 } from './mixin-css';
 
 export const theme = {
@@ -34,6 +35,7 @@ export const theme = {
     fontCaption,
     fontButton,
   },
+  fontStyles: fontStyle,
   breakpoints: {
     mobile: '320px',
     tablet: '834px',

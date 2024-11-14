@@ -5,8 +5,7 @@ declare module '@emotion/react' {
   export interface Theme {
     colors: ThemeType['colors'];
     fonts: ThemeType['fonts'];
+    fontStyles: ThemeType['fontStyles'];
     breakpoints: ThemeType['breakpoints'];
   }
 }
-
-declare module '@emotion/react/macro' {}

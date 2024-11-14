@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-const fontStyle = {
+export const fontStyle = {
   'space-mono-regular': css`
     font-family: 'Space Mono', monospace;
     font-weight: 400;
