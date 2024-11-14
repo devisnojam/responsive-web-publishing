@@ -1,4 +1,3 @@
-// Replace your-renderer with the renderer you are using (e.g., react, vue3)
 import type { Preview } from '@storybook/react';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
 import GlobalStyle from '../src/styles/global-style';

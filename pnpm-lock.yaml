@@ -156,6 +156,42 @@ importers:
         specifier: ^5.4.10
         version: 5.4.10(@types/node@22.9.0)
 
+  packages/storybook-react-vite-config:
+    devDependencies:
+      '@chromatic-com/storybook':
+        specifier: 3.2.2
+        version: 3.2.2(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/addon-essentials':
+        specifier: ^8.4.2
+        version: 8.4.2(@types/react@18.3.12)(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/addon-interactions':
+        specifier: 8.4.2
+        version: 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/addon-onboarding':
+        specifier: 8.4.2
+        version: 8.4.2(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/addon-themes':
+        specifier: ^8.4.2
+        version: 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/blocks':
+        specifier: 8.4.2
+        version: 8.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))
+      '@storybook/builder-vite':
+        specifier: ^8.4.2
+        version: 8.4.2(storybook@8.4.2(prettier@3.3.3))(vite@5.4.10(@types/node@22.9.0))
+      '@storybook/react':
+        specifier: ^8.4.2
+        version: 8.4.2(@storybook/test@8.4.2(storybook@8.4.2(prettier@3.3.3)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))(typescript@5.6.3)
+      '@storybook/react-vite':
+        specifier: ^8.4.2
+        version: 8.4.2(@storybook/test@8.4.2(storybook@8.4.2(prettier@3.3.3)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.24.3)(storybook@8.4.2(prettier@3.3.3))(typescript@5.6.3)(vite@5.4.10(@types/node@22.9.0))
+      '@storybook/test':
+        specifier: 8.4.2
+        version: 8.4.2(storybook@8.4.2(prettier@3.3.3))
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
+
 packages:
 
   '@adobe/css-tools@4.4.0':
@@ -288,7 +324,7 @@ packages:
     resolution: {integrity: sha512-lIsdU6JNrmYfJ5EbUCf4xW1ovy5wKQ2CkPRM4xogziOxH1nXxBSjpC9YqbFAP7circxMfYp+6x676BqWcEiixg==}
     peerDependencies:
       '@types/react': '*'
-      react: 19.0.0-rc-69d4b800-20241021
+      react: '>=16.8.0'
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -315,7 +351,7 @@ packages:
   '@emotion/use-insertion-effect-with-fallbacks@1.1.0':
     resolution: {integrity: sha512-+wBOcIV5snwGgI2ya3u99D7/FJquOIniQT1IKyDsBmEgwvpxMNeS65Oib7OnE2d2aY+3BU4OiH+0Wchf8yk3Hw==}
     peerDependencies:
-      react: 19.0.0-rc-69d4b800-20241021
+      react: '>=16.8.0'
 
   '@emotion/utils@1.4.1':
     resolution: {integrity: sha512-BymCXzCG3r72VKJxaYVwOXATqXIZ85cuvg0YOUDxMGNrKc1DJRZk8MgV5wyXRyEayIMd4FuXJIUgTBXvDNW5cA==}
