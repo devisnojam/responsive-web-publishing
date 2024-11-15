@@ -8,7 +8,6 @@ const FooterMeta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof Footer>;
 
 export default FooterMeta;

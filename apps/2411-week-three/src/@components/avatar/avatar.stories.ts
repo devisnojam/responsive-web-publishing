@@ -8,7 +8,6 @@ const AvatarMeta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof Avatar>;
 
 export default AvatarMeta;

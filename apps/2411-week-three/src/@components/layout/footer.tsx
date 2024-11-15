@@ -60,7 +60,9 @@ export default function Footer({ className }: Props) {
 }
 
 const Styled = styled.footer<Props>`
-  padding: 40px 30px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.background};
+  padding: 40px calc(30 / 375 * 100%);
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -157,5 +159,51 @@ const Styled = styled.footer<Props>`
     color: #cccccc;
     display: flex;
     align-items: flex-end;
+  }
+
+  ${({ theme }) => theme.mediaQueryHelper('tablet')} {
+    min-width: 690px;
+    padding: 40px calc(72 / 834 * 100%);
+    row-gap: 49px;
+    .content__top__sns-group {
+      margin-top: -10px;
+    }
+  }
+
+  ${({ theme }) => theme.mediaQueryHelper('desktop')} {
+    min-width: 1049.41px;
+    padding: 40px calc(195 / 1439.41 * 100%);
+    .content {
+      flex-direction: row;
+      column-gap: auto;
+      justify-content: space-between;
+      &__top {
+        box-sizing: border-box;
+        width: calc(327.41px);
+        padding-right: 85px;
+        row-gap: 20px;
+        &__logo {
+          margin-bottom: 10px;
+        }
+        &__description {
+          width: 220px;
+        }
+      }
+      &__middle {
+        width: 240px;
+        &__title {
+          margin-bottom: 10px;
+        }
+      }
+      &__bottom {
+        width: 420px;
+        &__title {
+          margin-bottom: 10px;
+        }
+        &__description {
+          width: 280px;
+        }
+      }
+    }
   }
 `;

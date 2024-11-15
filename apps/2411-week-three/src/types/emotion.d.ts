@@ -6,7 +6,7 @@ declare module '@emotion/react' {
     colors: ThemeType['colors'];
     fonts: ThemeType['fonts'];
     fontStyles: ThemeType['fontStyles'];
-    mediaQueryHelper: ThemeType['mediaQuery'];
+    mediaQueryHelper: ThemeType['mediaQueryHelper'];
     breakpoints: ThemeType['breakpoints'];
   }
 }

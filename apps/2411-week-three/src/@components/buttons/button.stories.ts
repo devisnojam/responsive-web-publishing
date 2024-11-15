@@ -8,7 +8,6 @@ const IconButtonMeta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof IconButton>;
 
 export default IconButtonMeta;

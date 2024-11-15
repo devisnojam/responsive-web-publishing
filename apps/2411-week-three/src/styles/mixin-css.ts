@@ -181,7 +181,7 @@ export const fontButton = (type: FontType) => {
 };
 
 export const breakpoints = {
-  mobile: '320px',
+  mobile: '375px',
   tablet: '834px',
   desktop: '1280px',
 };
