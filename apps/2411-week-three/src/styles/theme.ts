@@ -1,4 +1,5 @@
 import {
+  breakpoints,
   fontBase,
   fontButton,
   fontCaption,
@@ -8,6 +9,7 @@ import {
   fontH4,
   fontH5,
   fontStyle,
+  mediaQueryCSS,
 } from './mixin-css';
 
 export const theme = {
@@ -36,11 +38,8 @@ export const theme = {
     fontButton,
   },
   fontStyles: fontStyle,
-  breakpoints: {
-    mobile: '320px',
-    tablet: '834px',
-    desktop: '1280px',
-  },
+  mediaQueryHelper: mediaQueryCSS,
+  breakpoints,
 } as const;
 
 export type ThemeType = typeof theme;

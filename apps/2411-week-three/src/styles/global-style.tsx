@@ -27,13 +27,10 @@ export default function GlobalStyle() {
         }
 
         ///////////
+
         #root {
           margin: 0 auto;
           background-color: ${theme.colors.background};
-        }
-        @media (min-width: ${theme.breakpoints.tablet}) {
-        }
-        @media (min-width: ${theme.breakpoints.desktop}) {
         }
       `}
     />

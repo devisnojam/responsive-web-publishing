@@ -180,21 +180,13 @@ export const fontButton = (type: FontType) => {
   }
 };
 
-// export const mediaQueryCSS = css`
-//   // $device = "mobile" | "tablet" | "desktop"
-//   @mixin media-query($device) {
-//     @if $device == 'mobile' {
-//       @media (min-width: 320px) {
-//         @content;
-//       }
-//     } @else if $device == 'tablet' {
-//       @media (min-width: 834px) {
-//         @content;
-//       }
-//     } @else if $device == 'desktop' {
-//       @media (min-width: 1280px) {
-//         @content;
-//       }
-//     }
-//   }
-// `;
+export const breakpoints = {
+  mobile: '320px',
+  tablet: '834px',
+  desktop: '1280px',
+};
+type Breakpoints = keyof typeof breakpoints;
+
+export const mediaQueryCSS = (device: Breakpoints) => {
+  return `@media (min-width: ${breakpoints[device]})`;
+};
