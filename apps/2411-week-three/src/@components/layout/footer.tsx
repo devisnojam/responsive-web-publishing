@@ -60,7 +60,6 @@ export default function Footer({ className }: Props) {
 }
 
 const Styled = styled.footer<Props>`
-  width: 100%;
   background-color: ${({ theme }) => theme.colors.background};
   padding: 40px calc(30 / 375 * 100%);
   display: flex;
@@ -162,7 +161,6 @@ const Styled = styled.footer<Props>`
   }
 
   ${({ theme }) => theme.mediaQueryHelper('tablet')} {
-    min-width: 690px;
     padding: 40px calc(72 / 834 * 100%);
     row-gap: 49px;
     .content__top__sns-group {
@@ -171,7 +169,6 @@ const Styled = styled.footer<Props>`
   }
 
   ${({ theme }) => theme.mediaQueryHelper('desktop')} {
-    min-width: 1049.41px;
     padding: 40px calc(195 / 1439.41 * 100%);
     .content {
       flex-direction: row;
