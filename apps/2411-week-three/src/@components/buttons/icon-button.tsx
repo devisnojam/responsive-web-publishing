@@ -3,10 +3,11 @@ import { Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { cloneElement, ComponentProps, PropsWithChildren } from 'react';
 
-import { SVGIconEnvelopeSimple } from '../../assets/icons';
+import { SVGIconEnvelopeSimple, SVGIconUser } from '../../assets/icons';
 
 const BASIC_ICON_COMPONENT_ITEM = {
   envelope: <SVGIconEnvelopeSimple />,
+  user: <SVGIconUser />,
 };
 type IconKey = keyof typeof BASIC_ICON_COMPONENT_ITEM;
 
@@ -37,9 +38,10 @@ export default function IconButton({
 type StyleProps = Props & { theme: Theme };
 
 const baseStyle = ({ theme }: StyleProps) => css`
-  ${theme.fonts.fontH5('work-sans')}
-  padding: 0 50px;
-  height: 72px;
+  ${theme.fontStyles['work-sans-semi-bold']}
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 20px 50px;
   background-color: ${theme.colors.callToAction};
   color: #ffffff;
   border: 0;
@@ -48,6 +50,10 @@ const baseStyle = ({ theme }: StyleProps) => css`
   align-items: center;
   justify-content: center;
   column-gap: 12px;
+  .icon-btn {
+    width: 20px;
+    height: 20px;
+  }
   span {
     position: relative;
     top: 2px;

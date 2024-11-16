@@ -1,3 +1,3 @@
-import SVGLabelNFTMarket from './footer-label-nftmarket.svg?react';
+import SVGLabelNFTMarket from './logo-nftmarket.svg?react';
 
 export { SVGLabelNFTMarket };

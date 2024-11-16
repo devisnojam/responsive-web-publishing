@@ -11,7 +11,7 @@ export default function Avatar({ className, ...props }: Props) {
     <Img
       {...props}
       className={className}
-      src="/public/imgs/avatar-sample-img.avif"
+      src="/imgs/avatar-sample-img.avif"
       alt="avatar"
     />
   );
