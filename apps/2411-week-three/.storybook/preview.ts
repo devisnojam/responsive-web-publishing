@@ -38,10 +38,10 @@ const customViewport = {
 
 const preview: Preview = {
   parameters: {
-    // layout: 'centered',
+    layout: 'centered',
     viewport: {
-      // viewports: { ...customViewport },
-      // defaultViewport: 'mobile',
+      viewports: { ...INITIAL_VIEWPORTS, ...customViewport },
+      defaultViewport: 'mobile',
     },
     backgrounds: {
       values: [

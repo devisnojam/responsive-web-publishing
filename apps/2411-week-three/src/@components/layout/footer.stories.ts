@@ -6,7 +6,7 @@ const FooterMeta = {
   title: 'ui/layout/Footer',
   component: Footer,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
 } satisfies Meta<typeof Footer>;
 
