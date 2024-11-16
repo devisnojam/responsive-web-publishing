@@ -1,22 +1,13 @@
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 
+import { NFTType, UserType } from '../../types/index.type';
 import Avatar from '../avatar';
-
-type NFTCard = {
-  nftName: string;
-  nftThumbImgSrc: string;
-  creator: {
-    id: string;
-    name: string;
-    profileImgSrc?: string;
-  };
-  priceOfEth: number;
-  bidOfEth: number;
-};
 
 interface Props extends ComponentProps<'div'> {
   className?: string;
+  nft?: NFTType;
+  creator?: UserType;
 }
 
 export default function NFTCard({ className, ...props }: Props) {
@@ -51,7 +42,9 @@ export default function NFTCard({ className, ...props }: Props) {
 }
 
 const Styled = styled.div<Props>`
-  min-width: 300px;
+  /* min-width: 300px; */
+  width: 100%;
+  max-width: 500px;
   border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.background};
   overflow: hidden;
