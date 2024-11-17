@@ -34,12 +34,14 @@ const Styled = styled.div<Props>`
   }
 
   ${({ theme }) => theme.mediaQueryHelper('tablet')} {
+    padding: 60px 77px;
     .title {
       ${({ theme }) => theme.fonts.fontH3('work-sans')};
     }
   }
 
   ${({ theme }) => theme.mediaQueryHelper('desktop')} {
+    padding: 80px 115px;
     .title {
       ${({ theme }) => theme.fonts.fontH2('work-sans')};
     }
