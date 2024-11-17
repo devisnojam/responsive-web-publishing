@@ -30,6 +30,7 @@ export default function GlobalStyle() {
 
         #root {
           margin: 0 auto;
+          min-height: 100vh;
           background-color: ${theme.colors.background};
         }
       `}

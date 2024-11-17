@@ -34,17 +34,18 @@ const StyledLabel = styled.label<Props>`
     alignItems: 'center',
     columnGap: '12px',
     '>input': {
+      width: '90%',
       height: '22px',
       backgroundColor: 'transparent',
       order: 1,
       flex: 1,
       padding: 0,
       border: 0,
-      position: 'relative',
-      top: '3px',
+      fontSize: '16px',
       '&::placeholder': {
         ...theme.fonts.fontBase('work-sans'),
         position: 'relative',
+        color: theme.colors.caption,
       },
     },
     '>svg': {
