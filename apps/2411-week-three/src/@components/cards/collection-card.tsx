@@ -38,7 +38,6 @@ export default function CollectionCard({ className }: Props) {
 
 const Styled = styled.div<Props>`
   width: 100%;
-  max-width: 500px;
   border-radius: 20px;
   overflow: hidden;
   display: flex;

@@ -42,9 +42,7 @@ export default function NFTCard({ className, ...props }: Props) {
 }
 
 const Styled = styled.div<Props>`
-  /* min-width: 300px; */
   width: 100%;
-  max-width: 500px;
   border-radius: 20px;
   background-color: ${({ theme }) => theme.colors.background};
   overflow: hidden;
