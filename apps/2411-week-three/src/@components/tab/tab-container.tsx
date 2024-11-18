@@ -27,6 +27,7 @@ const StyledContainer = styled.div<Props>`
   }
   .tab__header {
     box-sizing: border-box;
+    margin: 0;
     padding: 0 30px;
     width: 100%;
     height: 70px;
