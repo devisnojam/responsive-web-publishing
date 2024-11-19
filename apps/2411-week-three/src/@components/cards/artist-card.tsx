@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 
@@ -5,19 +6,22 @@ import Avatar from '../avatar';
 
 interface Props extends ComponentProps<'div'> {
   className?: string;
-  varients?: 'default' | 'h-small' | 'h-medium' | 'h-large';
+  direction?: 'v' | 'h';
+  size?: 'sm' | 'm' | 'lg';
   ranking?: number;
 }
 
 export default function ArtistCard({
   className,
-  varients = 'default',
-  ranking = 3,
+  direction = 'v',
+  size = 'm',
+  ranking,
 }: Props) {
   return (
     <Styled
       className={`artist-card ${className ? className : ''}`}
-      varients={varients}
+      direction={direction}
+      size={size}
       ranking={ranking}
     >
       <Avatar className="artist-img" />
@@ -75,7 +79,7 @@ const Styled = styled.div<Props>`
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.caption};
     ${({ theme }) => theme.fonts.fontBase('space-mono')};
-    display: flex;
+    display: ${({ ranking }) => (ranking ? 'flex' : 'none')};
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -86,4 +90,27 @@ const Styled = styled.div<Props>`
       display: block;
     }
   }
+
+  ${({ direction, theme }) =>
+    direction === 'h' &&
+    css`
+      padding: 20px 20px;
+      flex-direction: row;
+      column-gap: 12px;
+      .artist-img {
+        width: 24px;
+        height: 24px;
+      }
+      .artist-info {
+        ${theme.fonts.fontBase('work-sans')};
+        position: relative;
+        top: 2px;
+        &__total-sales {
+          display: none;
+        }
+      }
+      .ranking {
+        display: none;
+      }
+    `}
 `;
