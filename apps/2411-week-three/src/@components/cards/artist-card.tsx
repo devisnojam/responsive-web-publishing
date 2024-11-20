@@ -91,7 +91,7 @@ const Styled = styled.div<Props>`
     }
   }
 
-  ${({ direction, theme }) =>
+  ${({ direction, size, ranking, theme }) =>
     direction === 'h' &&
     css`
       padding: 20px 20px;
@@ -102,9 +102,11 @@ const Styled = styled.div<Props>`
         height: 24px;
       }
       .artist-info {
-        ${theme.fonts.fontBase('work-sans')};
         position: relative;
         top: 2px;
+        &__name {
+          ${theme.fonts.fontBase('work-sans')};
+        }
         &__total-sales {
           display: none;
         }
@@ -112,5 +114,34 @@ const Styled = styled.div<Props>`
       .ranking {
         display: none;
       }
+
+      ${size === 'm' &&
+      css`
+        .artist-info__name {
+          ${theme.fonts.fontH5('work-sans')};
+        }
+      `}
+
+      ${size === 'lg' &&
+      css`
+        .artist-img {
+          width: 60px;
+          height: 60px;
+        }
+        .artist-info {
+          align-items: flex-start;
+          &__name {
+            ${theme.fonts.fontH5('work-sans')};
+          }
+          &__total-sales {
+            display: flex;
+          }
+        }
+        .ranking {
+          display: ${ranking ? 'flex' : 'none'};
+          left: 3.8%;
+          top: 13%;
+        }
+      `}
     `}
 `;
