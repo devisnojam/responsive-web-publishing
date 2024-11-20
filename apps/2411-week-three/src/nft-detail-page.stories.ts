@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import App from './App';
+import NFTDetailPage from './nft-detail-page';
 
 const AppMeta = {
-  title: 'page/NFTList',
-  component: App,
+  title: 'page/NFTDetail',
+  component: NFTDetailPage,
   parameters: {
     layout: 'fullscreen',
     viewport: {
-      defaultViewport: 'desktop',
+      defaultViewport: 'mobile',
     },
   },
-} satisfies Meta<typeof App>;
+} satisfies Meta<typeof NFTDetailPage>;
 
 export default AppMeta;
 
