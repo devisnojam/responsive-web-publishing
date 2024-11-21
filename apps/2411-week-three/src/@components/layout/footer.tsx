@@ -169,8 +169,9 @@ const Styled = styled.footer<Props>`
   }
 
   ${({ theme }) => theme.mediaQueryHelper('desktop')} {
-    padding: 40px calc(195 / 1439.41 * 100%);
+    padding: 40px 0;
     .content {
+      margin: 0 11.4289%;
       flex-direction: row;
       column-gap: auto;
       justify-content: space-between;
