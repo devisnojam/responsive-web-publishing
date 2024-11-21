@@ -4,26 +4,27 @@ import AuctionTimer from './@components/auction-timer';
 import { IconButton } from './@components/buttons';
 import { ArtistCard } from './@components/cards';
 import Layout from './@components/layout';
+import { SVGIconGlobe } from './assets/icons';
 
 export default function NFTDetailPage() {
   return (
     <div className="page-container">
       <Layout.Header />
-      <ScreenImg />
+      <BackgroundImgView />
       <NFTDetailInfo>
         <div className="title">
           <span>The Orbitians</span>
-          <span className="mint">Minted on Sep 30, 2022</span>
+          <span className="title__mint">Minted on Sep 30, 2022</span>
         </div>
         <div className="timer">
           <AuctionTimer />
           <IconButton className="timer__btn">Place Bid</IconButton>
         </div>
-        <div className="created-by">
+        <div className="parts created-by">
           <span className="label">Created By</span>
           <ArtistCard className="created-by__artist" direction="h" size="sm" />
         </div>
-        <div className="description">
+        <div className="parts description">
           <span className="label">Description</span>
           <span className="content">
             {'The Orbitians is a collection of 10,000 unique NFTs on the Ethereum ' +
@@ -39,11 +40,31 @@ export default function NFTDetailPage() {
               'beings their target.'}
           </span>
         </div>
-        <div className="details">
+        <div className="parts details">
           <span className="label">Details</span>
+          <ul className="details__link-list">
+            <li>
+              <a href="#">
+                <SVGIconGlobe />
+                <span>View on Etherscan</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <SVGIconGlobe />
+                <span>View Original</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div className="tags">
+        <div className="parts tags">
           <span className="label">Tags</span>
+          <div className="tags__btn-group">
+            <IconButton>{'Animation'.toUpperCase()}</IconButton>
+            <IconButton>{'illustration'.toUpperCase()}</IconButton>
+            <IconButton>{'MOON'.toUpperCase()}</IconButton>
+            <IconButton>{'MOON'.toUpperCase()}</IconButton>
+          </div>
         </div>
       </NFTDetailInfo>
       <Layout.Footer />
@@ -51,7 +72,7 @@ export default function NFTDetailPage() {
   );
 }
 
-const ScreenImg = styled.img`
+const BackgroundImgView = styled.section`
   width: 100%;
   height: 320px;
   background-image: url('/imgs/nft-sample-img-xl.png');
@@ -77,20 +98,34 @@ const NFTDetailInfo = styled.div`
     'grid-details'
     'grid-tags';
   row-gap: 20px;
+
+  .parts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .label {
+    color: #858584;
+    ${({ theme }) => theme.fonts.fontBase('space-mono')};
+  }
+
   .title {
+    grid-area: 'grid-title';
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     span {
       color: #ffffff;
       ${({ theme }) => theme.fonts.fontH4('work-sans')};
-      &.mint {
+      &__mint {
         color: ${({ theme }) => theme.colors.caption};
         ${({ theme }) => theme.fonts.fontBase('work-sans')};
       }
     }
   }
   .timer {
+    grid-area: grid-timer;
+    height: fit-content;
     padding: 30px 30px;
     border-radius: 20px;
     background-color: ${({ theme }) => theme.colors.backgroundSecondary};
@@ -108,26 +143,77 @@ const NFTDetailInfo = styled.div`
     }
   }
   .created-by {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    grid-area: grid-created-by;
     &__artist {
       padding: 0;
       background-color: transparent;
     }
   }
   .description {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    grid-area: grid-description;
     .content {
       color: #ffffff;
       ${({ theme }) => theme.fonts.fontBase('work-sans')};
       white-space: pre-wrap;
     }
   }
-  .label {
-    color: #858584;
-    ${({ theme }) => theme.fonts.fontBase('space-mono')};
+  .details {
+    grid-area: grid-details;
+    &__link-list {
+      li:nth-of-type(1) {
+        margin-bottom: 10px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      svg path {
+        fill: ${({ theme }) => theme.colors.caption};
+      }
+      span {
+        ${({ theme }) => theme.fonts.fontBase('work-sans')};
+        color: #ffffff;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+  .tags {
+    grid-area: grid-tags;
+    row-gap: 20px;
+    &__btn-group {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      button {
+        width: fit-content;
+        height: 46px;
+        padding: 0 30px;
+        color: #ffffff;
+        background-color: ${({ theme }) => theme.colors.backgroundSecondary};
+      }
+    }
+  }
+
+  ${({ theme }) => theme.mediaQueryHelper('tablet')} {
+    padding: 40px 72px;
+    column-gap: 30px;
+    grid-template-areas:
+      'grid-title grid-timer'
+      'grid-created-by grid-timer'
+      'grid-description grid-timer'
+      'grid-details .'
+      'grid-tags .';
+    grid-template-columns: 1fr 295px;
+  }
+
+  ${({ theme }) => theme.mediaQueryHelper('desktop')} {
+    padding: 40px 115px;
+    column-gap: 150px;
   }
 `;

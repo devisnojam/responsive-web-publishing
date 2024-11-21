@@ -7,7 +7,7 @@ export default function GlobalStyle() {
     <Global
       styles={css`
         html {
-          ${theme.fonts.fontH1('space-mono')}
+          ${theme.fonts.fontBase('work-sans')}
           user-select: none;
         }
         body {
@@ -25,7 +25,11 @@ export default function GlobalStyle() {
         img {
           max-width: 100%;
         }
-
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
         ///////////
 
         #root {
