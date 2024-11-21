@@ -203,5 +203,8 @@ const Styled = styled.footer<Props>`
         }
       }
     }
+    .copywrite {
+      margin: 0 9.00703%;
+    }
   }
 `;
