@@ -7,9 +7,9 @@ const AppMeta = {
   component: NFTDetailPage,
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      defaultViewport: 'tablet',
-    },
+    // viewport: {
+    //   defaultViewport: 'tablet',
+    // },
   },
 } satisfies Meta<typeof NFTDetailPage>;
 

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import AuctionTimer from './@components/auction-timer';
 import { IconButton } from './@components/buttons';
 import { ArtistCard } from './@components/cards';
+import { artistCardHorizontalMediumStyleCSS } from './@components/cards/artist-card';
 import Layout from './@components/layout';
 import { SVGIconGlobe } from './assets/icons';
 
@@ -88,7 +89,7 @@ const BackgroundImgView = styled.section`
 `;
 
 const NFTDetailInfo = styled.div`
-  padding: 40px 30px;
+  padding: 40px 8%;
   display: grid;
   grid-template-areas:
     'grid-title'
@@ -125,6 +126,7 @@ const NFTDetailInfo = styled.div`
   }
   .timer {
     grid-area: grid-timer;
+    margin: 0 auto;
     height: fit-content;
     padding: 30px 30px;
     border-radius: 20px;
@@ -201,7 +203,7 @@ const NFTDetailInfo = styled.div`
   }
 
   ${({ theme }) => theme.mediaQueryHelper('tablet')} {
-    padding: 40px 72px;
+    padding: 40px 8.63309%;
     column-gap: 30px;
     grid-template-areas:
       'grid-title grid-timer'
@@ -215,5 +217,12 @@ const NFTDetailInfo = styled.div`
   ${({ theme }) => theme.mediaQueryHelper('desktop')} {
     padding: 40px 115px;
     column-gap: 150px;
+    .created-by__artist {
+      ${artistCardHorizontalMediumStyleCSS}
+    }
+    .tags__btn-group {
+      flex-direction: row;
+      column-gap: 20px;
+    }
   }
 `;

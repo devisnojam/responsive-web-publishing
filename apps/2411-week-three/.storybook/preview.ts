@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import { DEFAULT_VIEWPORT, INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import GlobalStyle from '../src/styles/global-style';
 import { ThemeProvider } from '@emotion/react';
 import { theme } from '../src/styles/theme';
@@ -41,7 +41,7 @@ const preview: Preview = {
     layout: 'centered',
     viewport: {
       viewports: { ...INITIAL_VIEWPORTS, ...customViewport },
-      defaultViewport: 'mobile',
+      defaultViewport: DEFAULT_VIEWPORT,
     },
     backgrounds: {
       values: [

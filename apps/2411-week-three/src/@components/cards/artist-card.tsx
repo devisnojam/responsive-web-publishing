@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 
+import { fontH5 } from '../../styles/mixin-css';
 import Avatar from '../avatar';
 
 interface Props extends ComponentProps<'div'> {
@@ -36,6 +37,12 @@ export default function ArtistCard({
     </Styled>
   );
 }
+
+export const artistCardHorizontalMediumStyleCSS = css`
+  .artist-info__name {
+    ${fontH5('work-sans')};
+  }
+`;
 
 const Styled = styled.div<Props>`
   padding: 20px 20px;
