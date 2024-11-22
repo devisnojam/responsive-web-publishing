@@ -1,9 +1,8 @@
-import { CollectionCard } from './@components/cards';
-import NFTCard from './@components/cards/nft-card';
-import Layout from './@components/layout';
-import Tab from './@components/tab';
+import NFTCard, { CollectionCard } from '../../shared/components/cards';
+import Layout from '../../shared/components/layout';
+import Tab from '../../shared/components/tab';
 
-export default function App() {
+export default function MarketplacePage() {
   return (
     <div className="app-page">
       <Layout.Header />

@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 
-import { fontH5 } from '../../styles/mixin-css';
+import { fontH5 } from '../../../styles/mixin-css';
 import Avatar from '../avatar';
 
 interface Props extends ComponentProps<'div'> {

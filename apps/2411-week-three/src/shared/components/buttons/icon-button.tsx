@@ -3,7 +3,7 @@ import { Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { cloneElement, ComponentProps, PropsWithChildren } from 'react';
 
-import { SVGIconEnvelopeSimple, SVGIconUser } from '../../assets/icons';
+import { SVGIconEnvelopeSimple, SVGIconUser } from '../../../assets/icons';
 
 const BASIC_ICON_COMPONENT_ITEM = {
   envelope: <SVGIconEnvelopeSimple />,

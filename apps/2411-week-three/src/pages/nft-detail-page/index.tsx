@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
-import AuctionTimer from './@components/auction-timer';
-import { IconButton } from './@components/buttons';
-import { ArtistCard } from './@components/cards';
-import { artistCardHorizontalMediumStyleCSS } from './@components/cards/artist-card';
-import Layout from './@components/layout';
-import { SVGIconGlobe } from './assets/icons';
+import { SVGIconGlobe } from '../../assets/icons';
+import AuctionTimer from '../../shared/components/auction-timer';
+import { IconButton } from '../../shared/components/buttons';
+import { ArtistCard } from '../../shared/components/cards';
+import { artistCardHorizontalMediumStyleCSS } from '../../shared/components/cards/artist-card';
+import Layout from '../../shared/components/layout';
 
 export default function NFTDetailPage() {
   return (

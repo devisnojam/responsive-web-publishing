@@ -7,8 +7,8 @@ import {
   SVGIconStorefront,
   SVGIconTwitterLogo,
   SVGIconYoutubeLogo,
-} from '../../assets/icons';
-import { SVGLabelNFTMarket } from '../../assets/labels';
+} from '../../../assets/icons';
+import { SVGLabelNFTMarket } from '../../../assets/labels';
 import { IconButton } from '../buttons';
 
 interface Props extends ComponentProps<'footer'> {
