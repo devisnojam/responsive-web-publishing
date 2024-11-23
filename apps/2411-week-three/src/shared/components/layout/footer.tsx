@@ -60,7 +60,7 @@ export default function Footer({ className }: Props) {
 }
 
 const Styled = styled.footer<Props>`
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.backgroundSecondary};
   padding: 40px calc(30 / 375 * 100%);
   display: flex;
   flex-direction: column;
