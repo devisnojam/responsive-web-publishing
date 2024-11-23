@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import NFTDetailPage from '.';
 
-const AppMeta = {
+const NFTDetailPageMeta = {
   title: 'page/NFTDetailPage',
   component: NFTDetailPage,
   parameters: {
@@ -10,11 +10,30 @@ const AppMeta = {
   },
 } satisfies Meta<typeof NFTDetailPage>;
 
-export default AppMeta;
+export default NFTDetailPageMeta;
 
-type AppStory = StoryObj<typeof AppMeta>;
+type Story = StoryObj<typeof NFTDetailPageMeta>;
 
-export const Story: AppStory = {
-  name: 'base',
+export const Mobile: Story = {
+  name: 'breakpoint:mobile',
+  parameters: {
+    viewport: { defaultViewport: 'mobile' },
+  },
+  args: {},
+};
+
+export const Tablet: Story = {
+  name: 'breakpoint:tablet',
+  parameters: {
+    viewport: { defaultViewport: 'tablet' },
+  },
+  args: {},
+};
+
+export const Desktop: Story = {
+  name: 'breakpoint:desktop',
+  parameters: {
+    viewport: { defaultViewport: 'desktop' },
+  },
   args: {},
 };
