@@ -13,7 +13,14 @@ export default function NFTDetailPage() {
       <NFTDetailInfoSection />
       <NFTOwneredByArtistSection>
         <h4 className="title">More From This Artist</h4>
-        <div className="scroll-card-view">
+        <div className="scroll-card-view scrollable-container">
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
+          <NFTCard />
           <NFTCard />
           <NFTCard />
           <NFTCard />
@@ -58,6 +65,33 @@ const NFTOwneredByArtistSection = styled.section`
   .btn {
     grid-area: btn;
     height: 60px;
+  }
+
+  ${({ theme }) => theme.mediaQueryHelper('tablet')} {
+    padding: 40px 72px;
+    grid-template-areas:
+      'title btn'
+      'scroll-card-view scroll-card-view';
+    grid-template-columns: repeat(2, 1fr);
+    .title {
+      width: 100%;
+      text-align: left;
+    }
+    .scroll-card-view {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 60px;
+      column-gap: 30px;
+    }
+    .btn {
+      width: 272px;
+      justify-self: flex-end;
+    }
+  }
+
+  ${({ theme }) => theme.mediaQueryHelper('desktop')} {
+    .scroll-card-view {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 `;
 

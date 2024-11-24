@@ -38,8 +38,20 @@ export default function GlobalStyle() {
         h6 {
           margin: 0;
         }
+        // windows os scrollbar style
+        .scrollable-container {
+          ::-webkit-scrollbar {
+            width: 5px;
+          }
+          ::-webkit-scrollbar-thumb {
+            background: rgba(107, 107, 107, 0.5);
+            border-radius: 4px;
+          }
+          ::-webkit-scrollbar-track {
+            background: transparent;
+          }
+        }
         ///////////
-
         #root {
           margin: 0 auto;
           min-height: 100vh;

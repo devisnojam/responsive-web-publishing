@@ -25,7 +25,9 @@ export function TabPanelGroup({
   className,
 }: PropsWithChildren<TabPanelGroupProps>) {
   return (
-    <Styled className={`tab__panel-group ${className ? className : ''}`}>
+    <Styled
+      className={`tab__panel-group ${className ? className : ''} scrollable-container`}
+    >
       {children}
     </Styled>
   );
