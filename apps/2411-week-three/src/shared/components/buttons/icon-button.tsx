@@ -3,11 +3,16 @@ import { Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { cloneElement, ComponentProps, PropsWithChildren } from 'react';
 
-import { SVGIconEnvelopeSimple, SVGIconUser } from '../../assets/icons';
+import {
+  SVGIconArrowRight,
+  SVGIconEnvelopeSimple,
+  SVGIconUser,
+} from '../../../assets/icons';
 
 const BASIC_ICON_COMPONENT_ITEM = {
   envelope: <SVGIconEnvelopeSimple />,
   user: <SVGIconUser />,
+  'r-arrow': <SVGIconArrowRight />,
 };
 type IconKey = keyof typeof BASIC_ICON_COMPONENT_ITEM;
 

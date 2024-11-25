@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { ComponentProps } from 'react';
 
-import { SVGIconList, SVGIconStorefront } from '../../assets/icons';
-import { SVGLabelNFTMarket } from '../../assets/labels';
+import { SVGIconList, SVGIconStorefront } from '../../../assets/icons';
+import { SVGLabelNFTMarket } from '../../../assets/labels';
 import { IconButton } from '../buttons';
 
 interface Props extends ComponentProps<'header'> {

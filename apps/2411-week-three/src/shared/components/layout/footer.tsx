@@ -7,8 +7,8 @@ import {
   SVGIconStorefront,
   SVGIconTwitterLogo,
   SVGIconYoutubeLogo,
-} from '../../assets/icons';
-import { SVGLabelNFTMarket } from '../../assets/labels';
+} from '../../../assets/icons';
+import { SVGLabelNFTMarket } from '../../../assets/labels';
 import { IconButton } from '../buttons';
 
 interface Props extends ComponentProps<'footer'> {
@@ -60,7 +60,7 @@ export default function Footer({ className }: Props) {
 }
 
 const Styled = styled.footer<Props>`
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.backgroundSecondary};
   padding: 40px calc(30 / 375 * 100%);
   display: flex;
   flex-direction: column;
@@ -169,8 +169,9 @@ const Styled = styled.footer<Props>`
   }
 
   ${({ theme }) => theme.mediaQueryHelper('desktop')} {
-    padding: 40px calc(195 / 1439.41 * 100%);
+    padding: 40px 0;
     .content {
+      margin: 0 11.4289%;
       flex-direction: row;
       column-gap: auto;
       justify-content: space-between;
@@ -201,6 +202,9 @@ const Styled = styled.footer<Props>`
           width: 280px;
         }
       }
+    }
+    .copywrite {
+      margin: 0 9.00703%;
     }
   }
 `;

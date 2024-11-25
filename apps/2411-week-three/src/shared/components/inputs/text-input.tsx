@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { ComponentProps, useId } from 'react';
 
-import { SVGIconMagnifyingGlass } from '../../assets/icons';
+import { SVGIconMagnifyingGlass } from '../../../assets/icons';
 
 interface Props extends ComponentProps<'label'> {
   className?: string;

@@ -7,7 +7,7 @@ export default function GlobalStyle() {
     <Global
       styles={css`
         html {
-          ${theme.fonts.fontH1('space-mono')}
+          ${theme.fonts.fontBase('work-sans')}
           user-select: none;
         }
         body {
@@ -25,9 +25,33 @@ export default function GlobalStyle() {
         img {
           max-width: 100%;
         }
-
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+        }
+        // windows os scrollbar style
+        .scrollable-container {
+          ::-webkit-scrollbar {
+            width: 5px;
+          }
+          ::-webkit-scrollbar-thumb {
+            background: rgba(107, 107, 107, 0.5);
+            border-radius: 4px;
+          }
+          ::-webkit-scrollbar-track {
+            background: transparent;
+          }
+        }
         ///////////
-
         #root {
           margin: 0 auto;
           min-height: 100vh;
