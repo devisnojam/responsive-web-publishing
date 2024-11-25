@@ -38,6 +38,11 @@ export default function GlobalStyle() {
         h6 {
           margin: 0;
         }
+        input {
+          margin: 0;
+          padding: 0;
+          border: none;
+        }
         // windows os scrollbar style
         .scrollable-container {
           ::-webkit-scrollbar {
