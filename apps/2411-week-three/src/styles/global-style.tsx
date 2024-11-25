@@ -7,6 +7,7 @@ export default function GlobalStyle() {
     <Global
       styles={css`
         html {
+          min-height: 100vh;
           ${theme.fonts.fontBase('work-sans')}
           user-select: none;
         }

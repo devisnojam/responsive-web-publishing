@@ -2,8 +2,10 @@ import styled from '@emotion/styled';
 import { cloneElement, ComponentProps } from 'react';
 
 import {
+  SVGIconEnvelopeSimple,
   SVGIconEye,
   SVGIconEyeSlash,
+  SVGIconLockKey,
   SVGIconUser,
 } from '../../../assets/icons';
 
@@ -11,6 +13,8 @@ const BASIC_ICON_COMPONENT_ITEM = {
   user: <SVGIconUser />,
   eyeSlash: <SVGIconEyeSlash />,
   eye: <SVGIconEye />,
+  envelope: <SVGIconEnvelopeSimple />,
+  lockkey: <SVGIconLockKey />
 };
 type IconKey = keyof typeof BASIC_ICON_COMPONENT_ITEM;
 

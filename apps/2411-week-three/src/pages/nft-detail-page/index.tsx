@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import NFTDetailInfoSection from './components/nft-detail-info';
+import BannerImageView from '../../shared/components/banner-image-view';
 import { IconButton } from '../../shared/components/buttons';
 import NFTCard from '../../shared/components/cards/nft-card';
 import Layout from '../../shared/components/layout';
@@ -9,7 +10,14 @@ export default function NFTDetailPage() {
   return (
     <div className="page-container">
       <Layout.Header />
-      <BackgroundImgView />
+      <BannerImageView
+        imageURL={'/imgs/nft-sample-img-xl.png'}
+        breakpointHeight={{
+          mobile: '320px',
+          tablet: '420px',
+          desktop: '560px',
+        }}
+      />
       <NFTDetailInfoSection />
       <NFTOwneredByArtistSection>
         <h4 className="title">More From This Artist</h4>
@@ -92,20 +100,5 @@ const NFTOwneredByArtistSection = styled.section`
     .scroll-card-view {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
-`;
-
-const BackgroundImgView = styled.section`
-  width: 100%;
-  height: 320px;
-  background-image: url('/imgs/nft-sample-img-xl.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  ${({ theme }) => theme.mediaQueryHelper('tablet')} {
-    height: 420px;
-  }
-  ${({ theme }) => theme.mediaQueryHelper('desktop')} {
-    height: 560px;
   }
 `;
