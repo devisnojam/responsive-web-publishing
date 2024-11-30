@@ -22,6 +22,7 @@ export const theme = {
     callToAction: 'rgba(162, 89, 255, 1)',
     blueAccent: 'rgba(55, 125, 247, 1)',
     redAccent: 'rgba(255, 114, 98, 1)',
+    error: 'rgba(255, 0, 0, 1)',
     'gradient#1':
       'linear-gradient(0deg, rgba(162,89,255,1) 0%, rgba(255,98,80,1) 100%)',
     'gradient#2':

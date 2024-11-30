@@ -27,6 +27,8 @@ export default function CreateAccountPage() {
             <FormInputText
               leftIcon="user"
               inputProps={{ type: 'text', placeholder: 'Username' }}
+              isError={true}
+              errorMessage="Username is required!"
             />
             <FormInputText
               leftIcon="envelope"
@@ -34,10 +36,12 @@ export default function CreateAccountPage() {
             />
             <FormInputText
               leftIcon="lockkey"
+              rightIcon="eyeSlash"
               inputProps={{ type: 'password', placeholder: 'Password' }}
             />
             <FormInputText
               leftIcon="lockkey"
+              rightIcon="eyeSlash"
               inputProps={{ type: 'password', placeholder: 'Confirm Password' }}
             />
 
@@ -76,9 +80,9 @@ const ContentSection = styled.section`
       max-width: 330px;
       display: flex;
       flex-direction: column;
-      row-gap: 15px;
+      row-gap: 4px;
       &__submit {
-        margin-top: 15px;
+        margin-top: 6px;
         height: 46px;
       }
     }

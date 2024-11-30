@@ -27,6 +27,21 @@ export const Base: Story = {
   },
 };
 
+export const Error: Story = {
+  name: 'error',
+  args: {
+    width: '330px',
+    leftIcon: 'user',
+    rightIcon: 'eyeSlash',
+    inputProps: {
+      type: 'text',
+      placeholder: 'Username',
+    },
+    isError: true,
+    errorMessage: 'Username is Required!',
+  },
+};
+
 export const FullWidth: Story = {
   name: 'full width',
   parameters: {
