@@ -7,6 +7,7 @@ export default function GlobalStyle() {
     <Global
       styles={css`
         html {
+          min-height: 100vh;
           ${theme.fonts.fontBase('work-sans')}
           user-select: none;
         }
@@ -37,6 +38,11 @@ export default function GlobalStyle() {
         h5,
         h6 {
           margin: 0;
+        }
+        input {
+          margin: 0;
+          padding: 0;
+          border: none;
         }
         // windows os scrollbar style
         .scrollable-container {
